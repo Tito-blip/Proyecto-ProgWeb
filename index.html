@@ -26,9 +26,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </head>
   
-  <header> </header>
+  <header> 
 
-  <body>
+    <!-- Inicio Navbar -->
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
       <a class="navbar-brand" href="index.html">
@@ -62,16 +62,101 @@
       </div>
     </nav>
 
+    <!-- Fin Navbar -->
+
+
+    <!--Jumbotron / Banner -->
+
     <div class="jumbotron">
       <div class="container">
-          <h1 class="display-3 linea">Hello, World!</h1>
+          <h1 class="display-3 linea">Bienvenido!</h1>
         <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <a href="index.html"><button class="btn-hover color-10">Comprar</button></a>
+        <a href="#CatalogoItems"><button class="btn-hover color-10">Ver Catalogo</button></a>
         <i class="fa-solid fa-beat fa-arrow-pointer"></i>
       </div>
     </div>
 
-    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+    <!--Fin Jumbotron / Banner -->
+  
+  </header>
+
+  <body>
+
+
+  <div class="col-md-4">
+    <h2>Heading</h2>
+    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+    <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+  </div>
+  <div class="col-md-4">
+    <h2>Heading</h2>
+    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+    <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+  </div>
+
+
+  <!-- Modal PopUp (Registro de Correo)-->
+
+  <!-- Script para mostrar el modal -->
+
+  <!--
+  <script>
+
+   $(window).on('load',function(){
+    var delayMs = 500; // delay in milliseconds
+    
+    $('#modalpopup').modal({backdrop: 'static', keyboard: false}) // Prevenir el cierre del modal haciendo click en el fondo o con el teclado 
+
+    setTimeout(function(){
+        $('#modalpopup').modal('show'); // Con esta funcion esperamos a que cargue la pagina, para luego mostrar el PopUp de ofertas
+    }, delayMs); // Utilizando el timeout y la variable delayms se puede retrasar el popup.
+   
+    $(window).off('load'); // Quita la funcion despues de que la pagina cargo completamente
+
+    // Se pueden agregar cookies con una funcion para comprobar si el modal fue cerrado anteriormente, y asi no mostrarlo nuevamente al volver a entrar
+
+  });
+
+  </script>
+  -->
+  
+  <!-- Fin script modal-->
+
+  <!-- Crear modal -->
+  
+  <div class="modal fade" id="modalpopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content rounded-0">
+        <div class="modal-body bg-4">
+          <div class="d-flex main-content">
+            <div class="bg-image promo-img mr-3" style="background-image: url('assets/images/blob-scene-haikei.png');">
+            </div>
+            <div>
+              <div class="text-center">
+                <h3>Aqui tienes un Cupon!</h3>
+                <p>20% de descuento comprando hoy a traves de nuestra web.</p>
+              </div>
+              <div class="coupon">
+                PHARMA20
+              </div>
+              <p>
+                <a href="#" class="btn py-3 btn-primary btn-block">Usar cupon</a>
+              </p>
+              <p class="text-center">
+              <a href="#" class="cancel" data-dismiss="modal">No gracias</a>
+              </p>
+            </div>
+          </div>  
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <!-- Fin modal popup -->
+
+  <!-- Carousel -->
+  
+  <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -109,6 +194,17 @@
           </div>
         </div>
       </div>
+
+      <!-- Secciones Informativas -->
+
+      <section class="container-informacion">
+        <h2>H</h2>
+      </section>
+
+      <!-- Informativa -->
+
+      <!-- Controles del Carousel-->
+
       <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
@@ -118,6 +214,12 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
+
+    <!-- Fin Controles -->
+
+    <section class="container" id="CatalogoItems">
+
+    </section>
 
   </body>
 

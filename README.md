@@ -12,3 +12,7 @@
 > [!TIP]
 > [🚶](Ejemplos/) --> Ejemplos de BootStrap / HTML / Css
 > https://getbootstrap.com/docs/4.0/examples/
+
+## Mockup
+
+https://excalidraw.com/#json=xOov3rM8kCHuoapL43ACR,DHPZGgq_259RIzLpJkTj-w

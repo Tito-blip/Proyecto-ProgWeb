@@ -1,0 +1,161 @@
+@font-face {
+  font-family: 'Rocher';
+  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+body {
+    padding-top: 3.5rem;
+    padding-bottom: 200px;
+    background-color: rgb(31, 172, 185);
+}
+body {
+  text-align: left;
+}
+
+/* Fin Banner */
+
+/* Seccion Informacion */
+
+.navbar {
+  margin: 0px;
+  padding: 0px;
+}
+
+.fancy h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  text-align: center;
+  margin-right: 160px;
+}
+
+.fancy {
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    background-image: 
+      url("data:image/svg+xml,%3Csvg width='2250' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%2300A080' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%2300FDCF'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%2300FDCF'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%23008060'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-size: 110% auto;
+    background-position: center;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+/* Fin Informacion */
+
+
+/* Icono click */
+
+.fa-arrow-pointer {
+    font-size: 36px;
+} 
+
+
+  
+.logo img {
+  width: 70px; }
+  
+
+
+.footer-container {
+    display: flex;
+    justify-content: flex-start;
+}
+.footer {
+    text-align: left;
+}
+
+main[role="main"] {
+  text-align: left;
+}
+
+.container-sobre-nosotros {
+  margin: 30px;
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+  
+}
+
+
+.logo-img {
+  width: 200px; /* Ancho deseado */
+  height: auto; /* Altura ajustada automáticamente */
+  border-radius: 5px; /* Bordes redondeados */
+  margin: 50px;
+}
+
+.align-left {
+  text-align: left !important;
+}
+
+.container-farmaceuticos{
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+.img-farc {
+  width: 280px; /* Ancho deseado */
+  height: auto; /* Altura ajustada automáticamente */
+  border-radius: 5px; /* Bordes redondeados */
+  margin: 50px;
+}
+
+@keyframes moveRight {
+  0% {
+      left: 0;
+  }
+  100% {
+      left: 100%; /* Mueve la imagen completamente hacia la derecha */
+  }
+}
+.image-container {
+  display: flex;
+  justify-content: space-around; /* Para alinear horizontalmente las imágenes */
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-around; /* Para alinear horizontalmente las imágenes */
+}
+
+.moving-image {
+  width: 10%; /* Ajusta el ancho de las imágenes según tus necesidades */
+  height: auto; /* Para mantener la proporción original de la imagen */
+  animation: moveRight 5s linear infinite;
+}
+
+@keyframes moveRight {
+  0% {
+      transform: translateY(); /* La imagen comienza desde la posición inicial */
+  }
+  100% {
+      transform: translateY(110%); /* La imagen se mueve completamente hacia la derecha */
+  }
+}
+
+.jumbotron {
+  padding: 1rem; /* Agrega un poco de espacio entre el contenido y el borde del jumbotron */
+  display: inline-block ; /* Permite que el jumbotron se ajuste al contenido */
+  width: 100%;
+  margin: 0 auto;
+  background-color: white !important;
+}
+.jumbotron h1{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  animation: cambiaColor 5s infinite;
+}
+
+@keyframes cambiaColor {
+  0% { color: blue; }
+  25% { color: red; }
+  50% { color: green; }
+  75% { color: orange; }
+  100% { color: purple; }
+}
+
+.jumbotron .btn-primary{
+  font-size: 30px; /* Cambia el tamaño del texto del botón */
+  padding: 10px 20px; /* Ajusta el padding para cambiar el tamaño del botón */
+  
+}

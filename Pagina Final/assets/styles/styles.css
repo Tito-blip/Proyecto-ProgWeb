@@ -1,0 +1,322 @@
+body {
+    padding-top: 3.5rem;
+    background-color: grey;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/fondo-jumbotron.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+/* Banner */
+
+.jumbotron {
+    padding: 1rem; /* Agrega un poco de espacio entre el contenido y el borde del jumbotron */
+    display: inline-block ; /* Permite que el jumbotron se ajuste al contenido */
+    width: 100%;
+    margin: 0 auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/vuelta.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    color: aliceblue;
+} 
+
+.jumbotron p {
+  font-size: 1.5rem;
+} 
+
+.button-container {
+  position: absolute;
+  bottom: 20px; 
+  right: 20px; 
+}
+
+.button-container a {
+  display: inline-block; 
+  margin-right: 10px; 
+}
+
+.jumbotron a button {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.linea {
+    display: inline-block; 
+} 
+
+/* Fin Banner */
+
+.container-receta img {
+  border: 6px solid green; /* Black border with 2px width */
+  border-radius: 10px; /* Rounded corners */
+} 
+
+.container-receta {
+  padding-top: 100px;
+  text-align: center;
+} 
+
+/* Navbar */
+
+.navbar {
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.navbar li {
+  font-size: 1.2rem;
+}
+
+.fancy h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  margin-left: 10px;
+  margin-right: 200px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+}
+
+.fancy {
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    background-image: 
+      url("data:image/svg+xml,%3Csvg width='2250' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%2300A080' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%2300FDCF'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%2300FDCF'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%23008060'/%3E%3C/g%3E%3C/svg%3E%0A");
+    background-size: 110% auto;
+    background-position: center;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+/* Fin Navbar */
+
+/* Icono click */
+
+.fa-arrow-pointer {
+    font-size: 36px;
+} 
+
+/* Fin Icono */
+
+/* Popup */
+
+a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease; }
+    a, a:hover {
+      text-decoration: none !important; }
+  
+.content {
+  height: 300vh; }
+
+.modal {
+  border-radius: 7px;
+  overflow: hidden;
+  background-color: transparent; }
+
+.modal .logo a img {
+  width: 30px; }
+
+.modal .modal-content {
+  background-color: transparent;
+  border: none;
+  border-radius: 7px; }
+
+.modal .modal-content .modal-body {
+  border-radius: 7px;
+  overflow: hidden;
+  color: #fff;
+  padding-left: 0px;
+  padding-right: 0px;
+  -webkit-box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.9); }
+
+.modal .modal-content .modal-body h2 {
+  font-size: 18px; }
+
+.modal .modal-content .modal-body p {
+  color: #777;
+  font-size: 14px; }
+
+.modal .modal-content .modal-body h3 {
+        color: #000;
+        font-size: 22px; }
+
+.modal .modal-content .modal-body .close-btn {
+  color: #000; }
+  
+.modal .modal-content .modal-body .promo-img {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 200px;
+  flex: 0 0 200px; }
+
+.modal .main-content {
+  padding-left: 20px;
+  padding-right: 20px; 
+}
+
+.modal .coupon {
+  padding: 10px;
+  color: #000;
+  text-align: center;
+  background-color: #fff;
+  border: 2px dashed #6c757d;
+  margin-bottom: 20px; }
+
+.modal .cancel {
+  color: gray;
+  font-size: 14px; }
+  
+.form-control {
+  border: transparent; }
+
+.form-control:active, .form-control:focus, .form-control:hover {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important; }
+
+.btn {
+  border-radius: 4px;
+  border: none; }
+  
+.btn:active, .btn:focus {
+  outline: none;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important; }
+
+.bg-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  
+.logo img {
+  width: 70px; }
+  
+.bg-4 {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));;
+  background: linear-gradient(to bottom, #2F80ED ,#70e15f); 
+}
+  
+/* Productos */
+
+.producto {
+  width: calc(33.33% - 20px);
+  margin-right: 20px;
+  margin-bottom: 20px;
+  float: left; 
+}
+
+/* Estilos para el formulario de contacto */
+.contacto-container form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-container h1 {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.contacto-container fieldset {
+  border: none;
+  margin-bottom: 20px;
+}
+
+.contacto-container legend {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.contacto-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contacto-container input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box; /* Hace que el padding se incluya en el ancho total */
+}
+
+.contacto-container input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.contacto-container button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.contacto-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.contacto-container {
+  text-align: center;
+}
+
+/* Fin popup */
+
+/* Fin Productos */
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  margin-top: 100px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer-icons {
+  display: inline-flex;
+}
+
+
+
+.footer-icons a {
+  color: #fff;
+  margin-left: 10px;
+}
+
+/* Diseño responsivo */
+
+@media (max-width: 992px) {
+  .producto {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .producto {
+    width: calc(100% - 20px);
+    margin-right: 0;
+  }
+
+  .fancy h3 {
+    font-size: 1rem;
+    margin-right: 0px; 
+  }
+}

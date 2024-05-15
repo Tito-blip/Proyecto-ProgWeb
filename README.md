@@ -12,7 +12,7 @@
 > [💻](scripts/) --> Scripts de la página. 
 
 > [!TIP]
-> [🚶](Ejemplos/) --> Ejemplos de BootStrap / HTML / Css
+> [🚶](Ejemplos/) --> Ejemplos de BootStrap / HTML / CSS
 > https://getbootstrap.com/docs/4.0/examples/
 
 <br>

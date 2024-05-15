@@ -5,9 +5,9 @@
 > <br>
 > [🖼️](assets/images) --> Carpeta para subir imagenes de la página.
 > <br>
-> [🖌️](assets/styles) --> Archivos css, puede ser uno o varios separados
+> [🖌️](assets/styles) --> Archivos css.
 > <br>
-> [📄](pages/) --> Páginas adicionales a la principal
+> [📄](pages/) --> Páginas adicionales a la principal.
 > <br>
 > [💻](scripts/) --> Scripts de la página. 
 

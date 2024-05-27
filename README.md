@@ -18,7 +18,8 @@
 
 > [!TIP]
 > APIS
-> [👩‍🦲](https://publicapis.dev/)
+> <br>
+> [👩‍🦲](https://publicapis.dev/) --> https://publicapis.dev/
 
 <br>
 

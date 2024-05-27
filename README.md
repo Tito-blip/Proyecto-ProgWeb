@@ -15,7 +15,10 @@
 > [🚶](Ejemplos/) --> Ejemplos de BootStrap / HTML / CSS
 > https://getbootstrap.com/docs/4.0/examples/
 <br>
-> [👩‍🦲](API) https://publicapis.dev/
+
+> [!TIP]
+> APIS
+> [👩‍🦲](https://publicapis.dev/)
 
 <br>
 

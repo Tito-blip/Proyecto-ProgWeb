@@ -17,7 +17,7 @@
 <br>
 
 > [!TIP]
-> [👩‍🦲](https://publicapis.dev/) API --> https://publicapis.dev/
+> [👩‍🦲](https://publicapis.dev/) --> API's Publicas https://publicapis.dev/
 
 <br>
 

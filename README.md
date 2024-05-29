@@ -18,12 +18,17 @@
 
 > [!TIP]
 > [👩‍🦲](https://publicapis.dev/) --> API's Publicas https://publicapis.dev/
+> [🧁](https://apipheny.io/free-api/) --> Testear API's sin keys https://apipheny.io/free-api/
 
 <br>
 
 > [!WARNING]
 >[🌳](https://github.com/Tito-blip/Proyecto-ProgWeb/tree/Prueba-1) Branch Prueba 1
 
+
+## Postman
+
+[🧑‍🚀] https://www.postman.com/
 
 ## Mockup
 

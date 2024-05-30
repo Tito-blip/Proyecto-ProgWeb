@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chile Limpio</title>
+    
+    <link rel="icon" href="assets/img/earth2.svg">
+
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/hero.css">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <style>
+        body {
+            font-family: "Josefin Sans", sans-serif;
+            width: 100%;
+            height: 100vh;
+            background-color: #95cab7;
+            background-image: linear-gradient(rgba(34, 34, 34, 0.7),rgba(20, 20, 20, 0.7)), url("https://images.unsplash.com/photo-1558975198-f4f750bdd9c8?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: cover;
+            background-position: center;   
+            background-blend-mode: darken;
+        }
+
+        /* Estilo general para el contenedor de servicios */
+        .servicios-container {
+            padding: 50px 0;
+            background-color: #f8f9fa; /* Fondo claro */
+            text-align: center; /* Centramos el contenido */
+            border-radius: 10px;
+        }
+
+        /* Estilo para el título de la sección */
+        .servicios-titulo {
+            text-decoration: underline; /* Subraya el texto */
+            font-size: 3rem; /* Aumentar el tamaño de la fuente */
+            color: #007B7F; /* Color principal sólido */
+            text-transform: uppercase; /* Texto en mayúsculas */
+            margin-bottom: 30px;
+            font-weight: bold; /* Negrita */
+            font-family: 'Arial', sans-serif; /* Tipografía amigable */
+            letter-spacing: 2px; /* Espaciado entre letras */
+            background: rgba(48, 244, 224, 0.4); /* Fondo del texto con el color rgba mencionado */
+            padding: 10px 20px; /* Espaciado interno */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+        /* Estilo para los servicios */
+        .servicio {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+        .servicio h3 {
+            font-size: 1.5rem;
+            color: #007B7F;
+            margin-bottom: 15px;
+        }
+
+        .servicio p {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Estilo para las imágenes de los servicios */
+        .servicio-imagen {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            object-fit: cover; /* Ajusta la imagen para que cubra el contenedor */
+        }
+    </style>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#"><img src="assets/img/earth2.svg" style="width: 32px; height: 32px;" alt=""></a> 
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"> Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="servicios.html"> Servicios </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html" target="_self" role="button">
+                Contacto
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="clima.html"> Clima </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sobre_nosotros.html"> Sobre nosotros </a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <button type="button" class="btn btn-outline-warning" style="text-decoration: none; color: #d8d8d8;" data-toggle="modal" data-target="#loginModal">
+              Jhon Doe
+            </button>          
+          </form>
+        </div>
+      </nav>
+
+          <!--[Container de servicios]-->
+          <div class="container servicios-container">
+            <h2 class="servicios-titulo">¡Ayudanos a salvar Chile!</h2>
+            <div class="row">
+                <div class="col-md-4 servicio">
+                    <img src="https://www.paiscircular.cl/wp-content/uploads/2023/01/basura.jpg" class="img-fluid servicio-imagen" alt="Recolección de Residuos">
+                    <h3>Recolección de Residuos</h3>
+                    <p>Nos dedicamos a la recolección de residuos sólidos en la Isla de Chiloé, asegurándonos de que sean separados y reciclados adecuadamente para reducir el impacto ambiental.</p>
+                </div>
+                <div class="col-md-4 servicio">
+                    <img src="https://www.terram.cl/wp-content/uploads/2020/01/basura-chiloe.jpg" class="img-fluid servicio-imagen" alt="Descontaminación de Playas">
+                    <h3>Descontaminación de Playas</h3>
+                    <p>Trabajamos en la limpieza y descontaminación de playas y cuerpos de agua en Chiloé, removiendo plásticos, metales y otros desechos que afectan la vida marina y la salud de los ecosistemas.</p>
+                </div>
+                <div class="col-md-4 servicio">
+                    <img src="https://www.dosel.org/wp-content/uploads/2020/06/chiloe6.jpg" class="img-fluid servicio-imagen" alt="Educación Ambiental">
+                    <h3>Educación Ambiental</h3>
+                    <p>Impartimos talleres y actividades educativas para concienciar a la comunidad local sobre la importancia de mantener un entorno limpio y saludable, fomentando prácticas sostenibles.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 servicio">
+                    <img src="https://forestal.uchile.cl/.imaging/default/dam/imagenes/Forestal/imagenes-noticias/157818_1_foto2_S/jcr:content.jpg" class="img-fluid servicio-imagen" alt="Restauración de Ecosistemas">
+                    <h3>Restauración de Ecosistemas</h3>
+                    <p>Realizamos proyectos de restauración de ecosistemas dañados, plantando vegetación nativa y recuperando áreas degradadas para promover la biodiversidad.</p>
+                </div>
+                <div class="col-md-4 servicio">
+                    <img src="https://img.soy-chile.cl/Fotos/2017/10/31/file_20171031095933.jpg" class="img-fluid servicio-imagen" alt="Voluntariado Comunitario">
+                    <h3>Voluntariado Comunitario</h3>
+                    <p>Organizamos jornadas de voluntariado donde la comunidad puede participar activamente en las tareas de limpieza y restauración, fortaleciendo el sentido de pertenencia y cuidado del medio ambiente.</p>
+                </div>
+                <div class="col-md-4 servicio">
+                    <img src="https://image.salmonexpert.cl/1192402.webp?imageId=1192402&width=960&height=720&format=jpg" class="img-fluid servicio-imagen" alt="Monitoreo Ambiental">
+                    <h3>Monitoreo Ambiental</h3>
+                    <p>Implementamos programas de monitoreo para evaluar la calidad del aire, agua y suelo, identificando áreas críticas que requieren intervención y seguimiento continuo.</p>
+                </div>
+            </div>
+        </div>
+</body>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="sobre_nosotros.html">Sobre nosotros</a></li>
+                    <li><a href="clima.html">Clima</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>Contacto</h3>
+                <p>Dirección: Calle 123, Ciudad</p>
+                <p>Teléfono: +123456789</p>
+                <p>Email: chile_limpio@gmail.com</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Síguenos</h3>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://web.facebook.com/?_rdc=1&_rdr"><i class="fab fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="https://x.com/"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+</html>

@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,300,300italic,400italic,600,700,600italic,700italic');
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(34, 34, 34, 0.7),rgba(20, 20, 20, 0.7)), url("https://images.unsplash.com/photo-1582043826340-cc181d7aeb48?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-color: #000;
+    background-size: cover;
+    background-position: center;   
+    background-blend-mode: darken;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer h3 {
+    color: #fff;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #ccc;
+}
+
+/* Estilos para el encabezado del formulario */
+#encabezadoFormulario {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#encabezadoFormulario h2 {
+    margin-bottom: 10px;
+}
+
+#encabezadoFormulario p {
+    margin: 0;
+}
+
+/* Estilos para el formulario */
+#postulacionForm {
+    width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+#postulacionForm div {
+    width: 50%;
+    margin-bottom: 10px;
+    display: inline-block; /* Cambia a inline-block para que se muestren en línea */
+    box-sizing: border-box; /* Ajusta el modelo de caja para incluir el padding y el borde en el ancho */
+    padding: 0 10px; /* Agrega un poco de relleno horizontal para separar los elementos */
+}
+
+#postulacionForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+
+#postulacionForm input[type="text"],
+#postulacionForm input[type="number"],
+#postulacionForm input[type="email"],
+#postulacionForm input[type="tel"] {
+    width: calc(100% - 12px);
+    padding: 6px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+}
+
+.custom-button {
+    position: relative;
+    width: 120px;
+    height: 40px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.custom-button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -4px;
+    top: -1px;
+    margin: auto;
+    width: 128px;
+    height: 48px;
+    border-radius: 10px;
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.custom-button::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+}
+
+.custom-button:hover::after {
+    filter: blur(30px);
+}
+
+.custom-button:hover::before {
+    transform: rotate(-180deg);
+}
+
+.custom-button:active::before {
+    scale: 0.7;
+}
+
+#postulacionForm p {
+    margin-bottom: 10px;
+    color: white;
+}
+
+#errorMsg {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.error {
+    color: red;
+}
+
+/* Estilos para la carta de postulación */
+#cartaPostulacion {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+#cartaPostulacion h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+#cartaPostulacion p {
+    margin-bottom: 10px;
+}
+
+#cartaPostulacion p:last-child {
+    margin-bottom: 0;
+}
+#postulacionForm div {
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 10px;
+}
+#checklist {
+    margin: 20px auto;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    color: white;
+    max-width: 500px; /* Ajusta el ancho máximo según tus necesidades */
+}
+
+#checklist label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#checklist input[type="checkbox"] {
+    display: inline-block;
+    margin-right: 5px;
+}

@@ -1,7 +1,7 @@
 # Proyecto-ProgWeb
 
 > [!NOTE]
-> Orden Carpetas 📁
+> Orden Carpeta 📁
 > <br>
 > [🖼️](assets/images) --> Carpeta para subir imagenes de la página.
 > <br>

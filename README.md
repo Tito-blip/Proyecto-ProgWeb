@@ -81,7 +81,7 @@ El proyecto se estructura en base al modelo MVT (Modelo - Vista - Plantilla). Ut
 ```python
 # Archivo WSGI para iniciar con Gunicorn
 
-from paginaweb import app
+from pagina import app
 
 if  __name__  ==  "__main__":
 app.run()

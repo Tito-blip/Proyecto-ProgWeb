@@ -57,12 +57,16 @@ El proyecto se estructura en base al modelo MVT (Modelo - Vista - Plantilla). Ut
 │    └── app/ # Carpeta root app
 │	 ├── models # Modelos de la BD
 │	 ├── templates # Plantillas Jinja [Carpeta por defecto en Flask]
+│	   ├── auth
+│	     ├── login.html
+│	     ├── register.html
 │	   ├── pages
 │	     ├── *.html
 │          ├── layout # Plantillas "Esqueleto"
 │            ├── base.html
 │            ├── 404.html  
 │	 ├── views # Vistas
+│	 ├── wsgi.py # Gunicorn
 ├── static/ # Archivos estaticos
 │    ├── css
 │      ├── *.css
@@ -70,7 +74,7 @@ El proyecto se estructura en base al modelo MVT (Modelo - Vista - Plantilla). Ut
 │      ├── *.png	
 │    ├── js
 │      ├── *.js
-└─ wsgi.py # Gunicorn
+└─ 
 ```
 <br>
 

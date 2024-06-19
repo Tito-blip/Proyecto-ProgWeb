@@ -135,7 +135,7 @@ server {
 [Flask]: https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white
 [Flask-url]: https://flask.palletsprojects.com/en/3.0.x/
 [Jinja]: https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black
-[Jinja-url]: https://jinja.palletsprojects.com/en/3.1.x/
+[Jinja-url]: https://jinja.palletsprojects.com/en/3.1.x/templates/
 [Nginx]: https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white
 [Nginx-url]: https://nginx.org/en/
 [Gunicorn]: https://img.shields.io/badge/gunicorn-%298729.svg?style=for-the-badge&logo=gunicorn&logoColor=white

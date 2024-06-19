@@ -26,7 +26,7 @@
 <p style="text-align: justify"> 
 El lenguaje HTML se utiliza para generar las plantillas que usará Flask. Por otro lado, se agregan funcionalidades utilizando JavaScript y Bootstrap. Por último, se utiliza la base de datos MongoDB para guardar los retornos de la API y las vistas.
 
-Para el servidor, se utiliza una VM con Ubuntu Server, la cual posee un entorno virtual de Python donde se maneja la aplicación de Flask. Utilizando Gunicorn, se maneja todo lo relacionado con Flask. Finalmente, se utiliza Nginx para manejar y redirigir las conexiones entrantes, pasando por una redirección HTTPS y, adicionalmente, mostrar los archivos estáticos a través de Gunicorn.
+Para el servidor, se utiliza una VM con Ubuntu Server, la cual posee un entorno virtual de Python donde se maneja la aplicación de Flask. Utilizando Gunicorn, se maneja todo lo relacionado con Flask. Finalmente, se utiliza Nginx para manejar y redirigir las conexiones entrantes, pasando por una redirección HTTPS y, adicionalmente, mostrar los archivos estáticos.
  </p>
 
 ### Tecnologías
@@ -81,6 +81,46 @@ from paginaweb import app
 
 if  __name__  ==  "__main__":
 app.run()
+```
+
+<br>
+
+```bash
+
+# Ejemplo configuración Nginx
+
+server {
+        listen 80; # Escucha en el puerto 80, para las conexiones entrantes
+        server_name 192.168.100.1; # Establece un dominio o IP (En este proyecto se utiliza una ip para apuntar al servidor local)
+        return 302 https://$server_name$request_uri; # Maneja la conexion HTTP para redirigir a HTTPS
+}
+
+# Se establece un bloque server separado para manejar los dos puertos por separado
+
+server {
+
+        listen 443 ssl; # Escucha en el puerto 443 HTTPS
+
+        server_name 192.168.100.1;
+
+        # Ya que no se posee un dominio real, el certificado es solo local
+
+        ssl_certificate /etc/nginx/certificate/nginx-certificate.crt; # Define la ruta del certificado SSL
+        ssl_certificate_key /etc/nginx/certificate/nginx.key; # Llave del certificado SSL
+
+        location = /favicon.ico { access_log off; log_not_found off; } # Previene escribir las solicitudes de favicon.ico en los logs
+
+        location /static/ { 
+            root /home/test/proyecto/; # Define la ruta de los archivos estáticos para manejar las solicitudes de estos archivos
+        }
+
+        location / { # Procesa todas las solicitudes de conexión
+                include proxy_params; # Parámetros
+                proxy_pass http://unix:/run/gunicorn.sock; # Envía la solicitud a Gunicorn a través del socket Unix gunicorn.sock
+                proxy_redirect off; # Maneja la solicitud antes de pasarla a Gunicorn, evitando una redirección automática
+        }
+}
+
 ```
 
 <!-- MARKDOWN BADGES -->

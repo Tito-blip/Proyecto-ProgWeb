@@ -122,6 +122,14 @@ server {
                 include proxy_params; # Parámetros
                 proxy_pass http://unix:/run/gunicorn.sock; # Envía la solicitud a Gunicorn a través del socket Unix gunicorn.sock
                 proxy_redirect off; # Maneja la solicitud antes de pasarla a Gunicorn, evitando una redirección automática
+                proxy_intercept_errors off; # No manejar errores, ej: 404
+        }
+
+        error_page 404/404;
+                location = /400 {
+                proxy_pass http://unix:/run/gunicorn.sock; # Envía el error al socket de gunicorn
+                include proxy_params;
+                internal;
         }
 }
 

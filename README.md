@@ -23,9 +23,11 @@
 </div>
 
 <br>
+<p style="text-align: justify"> 
 El lenguaje HTML se utiliza para generar las plantillas que usará Flask. Por otro lado, se agregan funcionalidades utilizando JavaScript y Bootstrap. Por último, se utiliza la base de datos MongoDB para guardar los retornos de la API y las vistas.
 
 Para el servidor, se utiliza una VM con Ubuntu Server, la cual posee un entorno virtual de Python donde se maneja la aplicación de Flask. Utilizando Gunicorn, se maneja todo lo relacionado con Flask. Finalmente, se utiliza Nginx para manejar y redirigir las conexiones entrantes, pasando por una redirección HTTPS y, adicionalmente, mostrar los archivos estáticos a través de Gunicorn.
+ </p>
 
 ### Tecnologías
 * ![HTML5]

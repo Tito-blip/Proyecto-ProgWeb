@@ -66,15 +66,14 @@ El proyecto se estructura en base al modelo MVT (Modelo - Vista - Plantilla). Ut
 │            ├── base.html
 │            ├── 404.html  
 │	 ├── views # Vistas
-│	 ├── wsgi.py # Gunicorn
-├── static/ # Archivos estaticos
-│    ├── css
-│      ├── *.css
-│    ├── img
-│      ├── *.png	
-│    ├── js
-│      ├── *.js
-└─ 
+│        ├── static/ # Archivos estaticos
+│            ├── css
+│              ├── *.css
+│            ├── img
+│              ├── *.png	
+│            ├── js
+│              ├── *.js
+└─       ├── wsgi.py # Gunicorn 
 ```
 <br>
 

@@ -18,9 +18,16 @@
     ·
     <a href="https://github.com/Tito-blip/Proyecto-ProgWeb/branches">Pruebas Anteriores</a>
     ·
-    <a href="https://github.com/Tito-blip/Proyecto-ProgWeb/wiki">Wiki</a>
+    <a href="https://excalidraw.com/#token=oTxbERUOucfx33P_BjzkS">Diagramas</a>
   </p>
 </div>
+
+<!-- https://drive.google.com/file/d/1946RmQi3aCk-Q6fMNyWz9OeBk0qqQGwg/view -->
+<!-- https://drive.google.com/file/d/14LNAz1mN5pIrRpv1ZIUb9VKjTAT7Mpbb/view -->
+
+<br>
+<span> <b> Diagramas: https://excalidraw.com/#token=oTxbERUOucfx33P_BjzkS </b> </span>
+<br>
 
 <br>
 <p style="text-align: justify"> 

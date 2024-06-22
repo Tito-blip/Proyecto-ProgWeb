@@ -42,7 +42,7 @@ Para el servidor, se utiliza una VM con Ubuntu Server, la cual posee un entorno 
 * ![JS]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![Flask]][Flask-url] &nbsp; [![Jinja]][Jinja-url]
-* [![MongoDB]][Mongo-url]
+* [![Postgres]][Postgres-url]
 
 ### Servidor
 * ![Linux]
@@ -159,5 +159,5 @@ server {
 [Gunicorn]: https://img.shields.io/badge/gunicorn-%298729.svg?style=for-the-badge&logo=gunicorn&logoColor=white
 [Gunicorn-url]: https://gunicorn.org/
 [Linux]: https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black
-[MongoDB]: https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white
-[Mongo-url]: https://www.mongodb.com/
+[Postgres]: https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white
+[Postgres-url]: https://www.postgresql.org/

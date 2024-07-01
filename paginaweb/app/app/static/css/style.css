@@ -1,0 +1,166 @@
+/* Prevenier overflow */
+
+body {
+    overflow-x: hidden;
+}
+
+/* Modificar estilos default formulario */
+
+.form-check-input:checked {
+    background-color: #12cf61;  
+}
+
+.form-check-input {
+    border-width: 1px;
+    border-color: #333;  
+}
+
+.form-control {
+    border-color: #333;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.form-control:focus {
+    border-color: #333333; /* Change focus border color */
+    box-shadow: 0 0 10px rgba(126, 126, 126, 0.5); /* Change focus box shadow */
+}
+
+/* Background Image */
+
+.bg-img {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    filter: brightness(0.45);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    z-index: -1;
+}
+
+/* Navbar */
+
+.navbar {
+    background:rgba(45, 45, 50, 0);
+ 
+    color:#fff}
+
+.profile-img {
+    background: grey;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+
+.form-update {
+    background:rgba(45, 45, 50, 0); 
+    backdrop-filter: blur(2px); 
+    color:#fff;
+    margin-left: 10px;
+}
+
+.dropdown-menu {
+    background-color: #333;
+    border-color: #333;
+  }
+
+.dropdown-menu a.dropdown-item {
+color: #fff;
+}
+
+.dropdown-menu a.dropdown-item:hover {
+background-color: #444;
+color: #fff;
+}
+
+
+
+.contact{
+    padding: 4%;
+    height: 400px;
+}
+
+.col-md-3{
+    background: #d7a04d;
+    padding: 4%;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.contact-info{
+    margin-top:10%;
+}
+.contact-info img{
+    margin-bottom: 15%;
+}
+.contact-info h2{
+    margin-bottom: 10%;
+}
+.col-md-9{
+    background: #e2f2f2;
+    padding: 3%;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.contact-form label{
+    font-weight:600;
+}
+.contact-form button{
+    background: #25274d;
+    color: #fff;
+    font-weight: 600;
+    width: 25%;
+}
+.contact-form button:focus{
+    box-shadow:none;
+}
+
+.img-profile {
+
+    object-fit: cover;
+  
+    width: 100%;
+  
+    height: 100%;
+  
+  }
+  
+  
+  .bg-black {
+  
+    background-color: #525252;
+  
+  }
+  
+  
+  .skill-block {
+  
+    width: 30%;
+  
+    padding: 2rem;
+  
+  }
+  
+  
+  @media (min-width: 991px) and (max-width: 1200px) {
+  
+    .skill-block {
+  
+      padding: 3rem !important;
+  
+    }
+  
+  }
+  
+  
+  @media (min-width: 1200px) {
+  
+    .skill-block {
+  
+      padding: 4rem !important;
+  
+    }
+  
+  }

@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Tito-blip/Proyecto-ProgWeb">
-    <img src="paginaweb/app/static/img/logo.png" alt="Logo" width="80" height="80">
+    <img src="paginaweb/app/static/img/Logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Aplicacion Flask y Servidor Web</h3>

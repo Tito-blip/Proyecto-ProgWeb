@@ -1,0 +1,105 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %} Contactanos {% endblock title %}
+
+{% block nav_contact %} active {% endblock nav_contact%}
+
+{% block content %}
+
+{% include 'layouts/messages.html' %}
+
+<div class="container contact mt-3">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="contact-info">
+          <img src="https://image.ibb.co/kUASdV/contact-image.png" alt="image"/>
+          <h2>Contactanos</h2>
+          <h4>Esperamos tu mensaje!</h4>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="contact-form">
+          <form id="ContactoForm" action="/contacto" method="POST" enctype="multipart/form-data" novalidate>
+            {{ form.csrf_token() }}
+            <div class="form-floating mb-3">
+              {{ form.name(class="form-control", id="name", placeholder="") }}
+              <label for="name" class="floating-label"> {{ form.name.label }} </label>
+              <small> Debe tener entre 4 y 40 caracteres. </small>
+              <div class="invalid-feedback">
+                Porfavor ingresa un nombre valido.
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              {{ form.lastname(class="form-control", id="lastname", placeholder="") }}
+              <label for="lastname" class="floating-label"> {{ form.lastname.label }} </label>
+              <small> Debe tener entre 4 y 40 caracteres. </small>
+              <div class="invalid-feedback">
+                Porfavor ingresa un apellido valido.
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+              {{ form.email(class="form-control", id="email", placeholder="") }}
+              <label for="email" class="floating-label"> {{ form.email.label }} </label>
+              <small>Debe tener entre 10 y 100 caracteres.</small>
+              <div class="invalid-feedback">
+                Porfavor ingresa un email valido.
+              </div>
+            </div>
+            <div class="form-floating mb-3">
+                {{ form.gender(class="form-control", id="gender", placeholder="") }}
+                <label for="gender" class="floating-label"> {{ form.gender.label }} </label>
+                <small> Seleccionar. </small>
+                <div class="invalid-feedback">
+                  Porfavor seleccione una opcion.
+                </div>
+            </div>
+            <div class="form-floating mb-3">
+                {{ form.message(class="form-control", id="message", placeholder="") }}
+                <label for="message" class="floating-label"> {{ form.message.label }} </label>
+                <small> Debe tener entre 20 y 250 caracteres. </small>
+                <div class="invalid-feedback">
+                  Porfavor ingrese un mensaje.
+                </div>
+            </div>
+            <div class="d-grid gap-2">
+              {{ form.submit(class="btn btn-success") }}
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+   
+{% block script %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('ContactoForm');
+        
+        form.addEventListener('input', function(event) {
+            const input = event.target;
+            if (input.checkValidity() === false) {
+                input.classList.add('is-invalid');
+                input.classList.remove('is-valid');
+            } else {
+                input.classList.add('is-valid');
+                input.classList.remove('is-invalid');
+            }
+        });
+    
+        form.addEventListener('submit', function(event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        });
+    });
+</script>
+
+{% endblock script %}
+
+{% endblock content %}

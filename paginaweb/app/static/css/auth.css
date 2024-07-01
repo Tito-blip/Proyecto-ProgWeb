@@ -1,0 +1,89 @@
+.account-block {
+    padding: 0;
+    background-image: url(https://plus.unsplash.com/premium_photo-1680543345131-d8c941c445d7?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+}
+
+.account-block .overlay {
+    flex: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.account-block .account-testimonial {
+    text-align: center;
+    color: #adacac;
+    position: absolute;
+    margin: 0 auto;
+    padding: 0 1.75rem;
+    bottom: 3rem;
+    left: 0;
+    right: 0;
+}
+
+.card-body {
+    background-color: #F1FAFF;
+}
+
+/* Register */
+
+.account-block-r {
+    padding: 0;
+    background-image: url(https://images.unsplash.com/photo-1528183429752-a97d0bf99b5a?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+}
+
+.account-block-r .overlay-r {
+    flex: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.account-block-r .account-testimonial-r {
+    text-align: center;
+    color: #cacaca;
+    position: absolute;
+    margin: 0 auto;
+    padding: 0 1.75rem;
+    bottom: 3rem;
+    left: 0;
+    right: 0;
+}
+
+/* ------------------------------- */
+
+.text-theme {
+    color: #138f82 !important;
+}
+
+.btn-theme {
+    background-color: #138f82;
+    border-color: #109d8f;
+    color: #fff;
+}
+
+.input-hint {
+    margin: 0;
+    font-size: 1rem;
+    color: hsl(0 0% 70%);
+}
+
+@media (max-width: 767.98px) {
+    .account-block {
+        display: none;
+    }
+}   

@@ -1,0 +1,146 @@
+{% extends "layouts/base.html" %}
+
+{% block head %}
+
+<link rel="stylesheet" href="../../static/css/auth.css">
+
+{% endblock head %}
+
+{% block content %}
+
+{% include 'layouts/messages.html' %}
+
+<div id="main-wrapper" class="container">
+<div class="row justify-content-center">
+<div class="col-xl-10">
+    <div class="card border-0">
+        <div class="card-body p-0">
+            <div class="row no-gutters">
+                <div class="col-lg-6">
+                    <div class="p-5">
+                        <div class="mb-5">
+                            <h3 class="h4 font-weight-bold text-theme">Registro</h3>
+                        </div>
+                        <h6 class="h5 mb-0">Crea una cuenta!</h6>
+                        <p class="text-muted mt-2 mb-5">Ingresa un nombre, email y contraseña para crear tu cuenta.</p>
+                        <form id="RegisterForm" action="/register" method="POST" enctype="multipart/form-data" novalidate>
+                            {{ form.hidden_tag() }}
+                            <div class="form-floating mb-3">
+                                {{ form.rut(class="form-control", id="rut", placeholder="", pattern="\d{9}") }}
+                                <label for="rut"> {{ form.rut.label }} </label>
+                                <small> Ingresar rut valido. </small>
+                                <div class="invalid-feedback">
+                                    Porfavor ingresa un rut valido.
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                {{ form.name(class="form-control", id="name", placeholder="Jhon Doe") }}
+                                <label for="name"> {{ form.name.label }} </label>
+                                <small> Debe tener entre 4 y 40 caracteres. </small>
+                                <div class="invalid-feedback">
+                                    Porfavor ingresa un nombre valido.
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                {{ form.email(class="form-control", id="email", placeholder="example@gmail.com", pattern="\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b") }}
+                                <label for="email">{{ form.email.label }}</label>
+                                <small>Debe tener entre 10 y 100 caracteres.</small>
+                                <div class="invalid-feedback">
+                                    Porfavor ingresa un email valido.
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                {{ form.phone(class="form-control", id="phone", placeholder="", pattern="\d{9}") }}
+                                <label for="phone">{{ form.phone.label }}</label>
+                                <small>Debe tener 9 digitos.</small>
+                                <div class="invalid-feedback">
+                                    Porfavor ingresa un numero valido.
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                {{ form.address(class="form-control", id="address", placeholder="")}}
+                                <label for="address">{{ form.address.label }}</label>
+                                <small>Debe tener entre 20 y 60 caracteres.</small>
+                                <div class="invalid-feedback">
+                                    Porfavor ingresa una dirección valida.
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                {{ form.password(class="form-control", id="password", placeholder="Contraseña") }}
+                                <label for="password">{{ form.password.label }}</label>
+                                <small>Debe tener entre 8 y 100 caracteres</small>
+                                <div class="invalid-feedback">
+                                  Porfavor ingresa una contraseña valida.
+                                </div>
+                              </div>
+                            <div class="form-floating mb-3">
+                                {{ form.photo(class="form-control", id="photo", placeholder="Url") }}
+                                <label for="photo"> Url Foto </label>
+                                <small> Ingresar URL [Opcional]</small>
+                                <div class="invalid-feedback">
+                                    Porfavor ingresa un Url valido.
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                {{ form.submit(class="btn btn-success") }}
+                                <div class="d-flex ms-2">
+                                    <a href="https://google.com/" class="ms-2">
+                                        <img src="../../static/img/google.png" alt="Google" class="icon-img">
+                                    </a>
+                                    <a href="https://facebook.com/" class="ms-2">
+                                        <img src="../../static/img/facebook.png" alt="Facebook" class="icon-img">
+                                    </a>
+                                    <a href="https://x.com/" class="ms-2">
+                                        <img src="../../static/img/twitter.png" alt="Google" class="icon-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="account-block-r rounded-right">
+                        <div class="overlay-r rounded-right"></div>
+                        <div class="account-testimonial-r">
+                            <p class="lead text-white">"Texto de ejemplo."</p>
+                            <p>- Empresa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>  
+
+{% block script %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('RegisterForm');
+        
+        form.addEventListener('input', function(event) {
+            const input = event.target;
+
+            if (input.checkValidity() === false) {
+                input.classList.add('is-invalid');
+                input.classList.remove('is-valid');
+            } else {
+                input.classList.add('is-valid');
+                input.classList.remove('is-invalid');
+            }
+        });
+    
+        form.addEventListener('submit', function(event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        });
+    });
+</script>
+{% endblock script %}
+
+{% endblock content %}

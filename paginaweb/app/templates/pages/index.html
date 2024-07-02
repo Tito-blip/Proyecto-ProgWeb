@@ -1,0 +1,34 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+<body>
+
+{% block nav_index %} active {% endblock nav_index %}
+
+{% block background %} https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?fm=jpg&w=3000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D {% endblock background %}
+
+{% block content %}
+
+{% include "layouts/messages.html" %}
+
+<div style="margin-top: 80px;" class="container py-5">
+  <div class="row align-items-center g-5">
+    <div class="col-lg-6 order-lg-1">
+      <h1 style="color: azure;"  class="display-5 fw-bold lh-1 mb-3">Explora el Mundo con Nosotros</h1>
+      <p class="lead" style="color: rgb(217, 232, 227);">
+        <b>Descubre destinos increíbles y experiencias inolvidables con nuestra agencia de turismo. 
+        Ofrecemos paquetes personalizados que se adaptan a tus necesidades y deseos, 
+        garantizando unas vacaciones perfectas.</b>
+      </p>
+      <div class="d-grid gap-2">
+        <a type="button" href="/destinos" class="btn btn-info btn-lg px-4 me-2">Conoce nuestros destinos!</a>
+        <a style="color: aliceblue;" type="button" href="/nosotros" class="btn btn-outline-warning btn-lg me-2 px-4">Nuestra Historia</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+    
+</body>

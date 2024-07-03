@@ -26,7 +26,7 @@
 <!-- https://drive.google.com/file/d/14LNAz1mN5pIrRpv1ZIUb9VKjTAT7Mpbb/view -->
 
 <br>
-<span> <b> Diagramas: https://excalidraw.com/#json=Q0PZcTOEWm8Sgbb35139O,HlEz6P8zOcw4FWUPpw9X1w </b> </span>
+<span> <b> Diagramas: https://excalidraw.com/#json=IvokY3wBA8ipl7ADmGBcs,TgS05NcxbyC7cgXH_dsuZg </b> </span>
 <br>
 
 <br>

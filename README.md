@@ -22,13 +22,6 @@
   </p>
 </div>
 
-<!-- https://drive.google.com/file/d/1946RmQi3aCk-Q6fMNyWz9OeBk0qqQGwg/view -->
-<!-- https://drive.google.com/file/d/14LNAz1mN5pIrRpv1ZIUb9VKjTAT7Mpbb/view -->
-
-<br>
-<span> <b> Diagramas: https://excalidraw.com/#json=IvokY3wBA8ipl7ADmGBcs,TgS05NcxbyC7cgXH_dsuZg </b> </span>
-<br>
-
 <br>
 <p style="text-align: justify"> 
 El lenguaje HTML se utiliza para generar las plantillas que usará Flask. Por otro lado, se agregan funcionalidades utilizando JavaScript y Bootstrap. Por último, se utiliza la base de datos MongoDB para guardar los retornos de la API y las vistas.

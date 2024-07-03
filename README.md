@@ -62,17 +62,6 @@ El proyecto se estructura en base al modelo MVT (Modelo - Vista - Plantilla). Ut
 
 ├── paginaweb/
 │    └── app/ # Carpeta root app
-│	 ├── models # Modelos de la BD
-│	 ├── templates # Plantillas Jinja [Carpeta por defecto en Flask]
-│	   ├── auth
-│	     ├── login.html
-│	     ├── register.html
-│	   ├── pages
-│	     ├── *.html
-│          ├── layout # Plantillas "Esqueleto"
-│            ├── base.html
-│            ├── 404.html  
-│	 ├── views # Vistas
 │        ├── static/ # Archivos estaticos
 │            ├── css
 │              ├── *.css
@@ -80,6 +69,27 @@ El proyecto se estructura en base al modelo MVT (Modelo - Vista - Plantilla). Ut
 │              ├── *.png	
 │            ├── js
 │              ├── *.js
+│	 ├── templates # Plantillas Jinja [Carpeta por defecto en Flask]
+│	   ├── api
+│	   ├── errors
+│	     ├── 404.html
+│	     ├── 401.html
+│	     ├── 500.html
+│	   ├── forms
+│	     ├── contacto.html
+│	   ├── auth
+│	     ├── login.html
+│	     ├── register.html
+│	   ├── pages
+│	     ├── *.html
+│          ├── layout # Plantillas "Esqueleto"
+│            ├── base.html
+│            ├── 404.html
+│	 ├── models.py # Modelos de la BD
+│	 ├── views.py # Vistas
+│	 ├── extensions.py # Librerias
+│	 ├── forms.py # WTForms
+│	 ├── pagina.py # Equivalente app.py
 └─       ├── wsgi.py # Gunicorn 
 ```
 <br>

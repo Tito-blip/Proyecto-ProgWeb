@@ -1,0 +1,102 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Sobre Nosotros - Turismo-Extremo{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="../../static/css/nosotros.css">
+{% endblock head %}
+
+{% block nav_about %} active {% endblock nav_about %}
+
+{% block content %}
+
+{% include "layouts/messages.html" %}
+
+<div class="row justify-content-center text-center mb-4">
+    <div class="col-xl-10"> <!-- Reducción del ancho del contenedor -->
+        <header role="heading">
+            <h1 class="title-1">Sobre Turismo Extremo Sur</h1>
+        </header>
+        
+        <div class="content">
+            <p>¡Explora el sur de Chile y vive experiencias únicas en deportes extremos! Desde las imponentes montañas de la Patagonia
+                 hasta las aguas cristalinas de lagos y ríos, este país tricontinental ofrece un escenario ideal para aventuras inolvidables.
+                  Ya sea que estés buscando consejos para planificar tu viaje o descubrir la historia y cultura de esta región, aquí encontrarás
+                   todo lo que necesitas para sumergirte en el emocionante mundo del turismo extremo en el sur de Chile.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container sobrenosotros-container">
+    <div class="row align-items-center mb-5">
+        <div class="col-md-6 col-xl-5 order-2 order-md-1">
+            <div class="py-4 pr-md-3 pr-lg-5 pr-xl-0"> <!-- Reducción del padding vertical -->
+                <h3 class="title-section has-border mb-4"><strong>Seguridad y preparativos</strong></h3> <!-- Reducción del margen inferior -->
+                <p>Explora el sur de Chile con tranquilidad gracias a nuestros rigurosos estándares de seguridad para el turismo extremo. Antes de viajar, asegúrate de tener los siguientes documentos y preparativos:</p>
+                <ul>
+                    <li>Documento de identificación válido (cédula o pasaporte).</li>
+                    <li>Visa estampada dependiendo de tu país de origen.</li>
+                    <li>Para ciudadanos sudamericanos, de la Unión Europea, Estados Unidos y Canadá, no se requiere visa como turista. Sin embargo, algunos países deben pagar una tasa en efectivo (impuesto de reciprocidad) al llegar al aeropuerto de Chile.</li>
+                    <li>Los viajeros procedentes de Australia deben obtener una E-visa específica, que puedes solicitar <a href="https://www.consulado.gob.cl/servicios/e-visa-para-australia" target="_blank" rel="noopener noreferrer">aquí</a>.</li>
+                </ul>
+                <div class="alert alert-border alert-info border border-warning">
+                    <div class="alert_information pr-2"><span class="ic-informacion"></span></div>
+                    <p>Además, recuerda que si traes productos de origen animal o vegetal, debes declararlos ante el Servicio Agrícola y Ganadero (SAG).</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xl-5 offset-xl-1 order-1 order-md-2">
+            <div class="gallery-side is-right float-md-left expanded-element"  style="width:100%">
+                <img class="gallery-side_image" src="https://www.encancha.cl/resizer/v2/SYJA6HZJXFC2FKIW2BMAZLRVHQ.jpg?smart=true&auth=f41feef3a3eb3d27b49643fb0b2bb8c703a36bab699ce1dd96079d65369a26f5&width=4000&height=2666" alt="" style="max-width: 100%; height: em; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row align-items-center">
+        <div class="col-md-6 offset-xl-1">
+            <div class="py-4 pl-md-3 pl-lg-5 pl-xl-0"> <!-- Reducción del padding vertical -->
+                <h3 class="title-section has-border mb-4"><strong>Turismo Extremo Sur te Cuida</strong></h3> <!-- Reducción del margen inferior -->
+                <p>Recomendaciones para un buen viaje por el sur de Chile:</p>
+                <p><img decoding="async" style="display: inline-block; margin-right: 5px; width: 25px;" src="https://www.chile.travel/wp-content/uploads/2021/08/icono_list_check.png" /> Reserva servicios con nostros </p>
+                <p><img decoding="async" style="display: inline-block; margin-right: 5px; width: 25px;" src="https://www.chile.travel/wp-content/uploads/2021/08/icono_list_check.png" /> Para conocer el costo de su viaje en taxis oficiales y habilitados descarga la <a href="http://www.votchile.cl/">App VotChile</a>.</p>
+                <p><img decoding="async" style="display: inline-block; margin-right: 5px; width: 25px;" src="https://www.chile.travel/wp-content/uploads/2021/08/icono_list_check.png" /> Asegúrate de salir con lo preciso y en caso de tener objetos de valor, guárdalos en tu alojamiento.</p>
+                <p><img decoding="async" style="display: inline-block; margin-right: 5px; width: 25px;" src="https://www.chile.travel/wp-content/uploads/2021/08/icono_list_check.png" /> Cambia dinero en casas de cambio formales o en bancos; nunca en las calles. Infórmate del valor previamente.</p>
+                <p><img decoding="async" style="display: inline-block; margin-right: 5px; width: 25px;" src="https://www.chile.travel/wp-content/uploads/2021/08/icono_list_check.png" /> En caso de ser víctima de una emergencia o delito, contacta a Carabineros al 133 o acude a la estación de policía más cercana y/o contacta a tu Consulado en Chile.</p>
+            </div>
+        </div>
+    </div>
+</div>
+    <h4 class="title-2 mb-4">Información importante</h4> <!-- Reducción del margen inferior -->
+
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="info-card bg-blue-light-100 mb-4">
+                <span class="icon-circle mb-4 text-black">
+                    <img src="" class="img-fluid" alt="" decoding="async" />												</span>
+                <div class="title-4 mb-3">Idioma</div>
+                <p>En Chile el idioma oficial es el español, pero en el territorio también hay comunidades que hablan lenguas autóctonas.</p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="info-card bg-blue-light-100 mb-4">
+                <span class="icon-circle mb-4 text-black">
+                    <img src="" class="img-fluid wp-stateless-item" alt="" decoding="async" data-image-size="full" data-stateless-media-bucket="chile-travel-cdn" data-stateless-media-name="2021/07/noun_season_3256313-1.svg" />												</span>
+                <div class="title-4 mb-3">Estaciones</div>
+                <p>Acá vivimos el verano entre enero y marzo y el invierno entre julio y septiembre. <br /><strong>Actualmente estamos en</strong> <b>Invierno</b></p>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="info-card bg-blue-light-100 mb-4">
+                <span class="icon-circle mb-4 text-black">
+                    <img src="" class="img-fluid" alt="" decoding="async" />												</span>
+                <div class="title-4 mb-3">Clima</div>
+                <p>En el sur de Chile, se caracteriza por recibir abundantes lluvias, por lo que es altamente recomendable llevar ropa abrigada y especialmente diseñada para la lluvia.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

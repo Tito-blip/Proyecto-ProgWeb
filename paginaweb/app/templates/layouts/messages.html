@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="../../static/css/alerts.css">
+
+<div class="container fade show mx-auto">
+   {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }} alert-white rounded alert-dismissible fade show" role="alert">
+                    {{ message | safe }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    {% if category == 'success' %}
+                    <div class="icon">
+                        <i class="fa fa-circle-check"></i>
+                    </div> 
+                    {% elif category == 'warning' %}
+                    <div class="icon">
+                        <i class="fa fa-circle-exclamation"></i>                        
+                    </div>
+                    {% elif category == 'danger' %}
+                    <div class="icon">
+                        <i class="fa fa-circle-xmark"></i>
+                    </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</div>
+
+{# Errores del formulario (validaciones de WTForms) #}
+
+{% if form %}
+
+<div class="container fade show mx-auto"></div>
+{% for field in form.errors %}
+{% for error in form.errors[field] %}
+    {% if error != 'Invalid input '%} {# No mostrar error Invalid input, para mostrar los mensajes personalizados #}
+    <div class="alert alert-danger alert-white rounded alert-dismissible fade show" role="alert">
+        {{ error | safe }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <div class="icon">
+            <i class="fa fa-circle-xmark"></i>
+        </div> 
+    </div>
+    {% endif %}
+{% endfor %}
+{% endfor %}
+</div>
+
+{% endif %}

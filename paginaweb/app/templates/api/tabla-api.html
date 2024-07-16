@@ -1,0 +1,29 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Api Json Table {% endblock title %}
+
+{% block content %}
+
+<table class="table">
+ <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Foto</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Edad</th>
+    </tr>
+  </thead>
+  <tbody>    
+    {% for i in resp %}
+        <tr>
+        <th scope="row">{{i.id}}</th>
+        <td><img width="50px" height="50px" src="{{i.thumbnailUrl}}"></td> 
+        {# Establecer foto por defecto si no tiene #}
+        <td>{{i.title}}</td>
+        <td>{{i.url}}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock content %}

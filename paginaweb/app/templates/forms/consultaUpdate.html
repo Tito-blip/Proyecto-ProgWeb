@@ -1,0 +1,63 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Respuesta Consulta {% endblock title %}
+
+{% block content %}
+
+<form id="UpdateForm" class="form-update justify-content-center" action="/tableConsulta/{{consulta.id}}" method="POST"> 
+    <div class="form-group col-md-6">
+        <label for="rutUpdate">Rut</label>
+        <input type="text" class="form-control" id="rutUpdate" name="rut" value="{{consulta.rut}}" readonly>
+    </div>    
+    
+    <div class="form-group col-md-6">
+        <label for="nameUpdate">Nombre</label>
+        <input type="text" class="form-control" id="nameUpdate" name="name" value="{{consulta.name}}" readonly>
+    </div>
+
+    <div class="form-group col-md-6">
+        <label for="emailUpdate">Email</label>
+        <input type="text" class="form-control" id="emailUpdate" name="email" value="{{consulta.email}}" readonly>
+        <p class="input-hint">Ingresar un email.</p>
+    </div>     
+
+    <div class="form-group col-md-6">
+        <label for="messageUpdate">Respuesta</label>
+        <input type="textfield" class="form-control" id="messageUpdate" name="message" value="" maxlength="250">
+        <p class="input-hint">Ingresar una respuesta.</p>
+    </div>    
+
+    <button type="button" class="btn btn-danger"> <a style="text-decoration: none; color: #fff;" href="/table"> Cancelar </a> </button>
+    <button type="submit" class="btn btn-success">Enviar</button>
+</form>
+
+{% block script %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('UpdateForm');
+        
+        form.addEventListener('input', function(event) {
+            const input = event.target;
+
+            if (input.checkValidity() === false) {
+                input.classList.add('is-invalid');
+                input.classList.remove('is-valid');
+            } else {
+                input.classList.add('is-valid');
+                input.classList.remove('is-invalid');
+            }
+        });
+    
+        form.addEventListener('submit', function(event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+        });
+    });
+</script>
+{% endblock script %}
+
+{% endblock content %}

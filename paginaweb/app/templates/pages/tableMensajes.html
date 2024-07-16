@@ -1,0 +1,111 @@
+{% extends "layouts/base.html" %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+{% block title %} Consultas {% endblock title %}
+
+{% block head %}
+
+<link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.css" />  
+
+{% endblock head %}
+
+<body>
+
+{% block nav_consulta %} active {% endblock nav_consulta%}
+
+{% block background %} https://images.unsplash.com/photo-1426604966848-d7adac402bff?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D {% endblock background %}
+
+{% block content %}
+
+{% include "layouts/messages.html" %}
+
+<div class="modal fade" id="modalSolic" tabindex="-1" aria-labelledby="modalSolic" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Responder Solicitud</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <form class="was-validated" method="GET" action="{{url_for('views_pagina.redirect_consulta')}}">
+          <select required style="background-color: #ffffffe3;" class="form-select border-0 mb-1 px-4 py-4 rounded shadow" name="id">
+          <option value="" disabled selected> Mensajes </option>
+          {% for i in base if i.status != 'Respondido' %}
+            <option  value="{{i.id}}"> {{i.name}} </option>
+          {% endfor %}
+          </select>
+          <br>
+          <small>Debes seleccionar un mensaje</small>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-success">Enviar</button>
+          </div>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tabla de Usuarios -->
+
+  <div class="row py-5">
+    <div class="col-lg-10 mx-auto">
+      <div class="card rounded shadow border-0">
+        <div class="card-body p-4 rounded">
+          <div class="table-responsive">
+            <table id="tablaEmpleados" style="width: 100%;" class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Telefono</th>
+                  <th scope="col">Estado</th>
+                  <th scope="col">Mensaje</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for i in base %}
+                <tr>
+                  <td>{{ i.id }}</td>
+                  <td>{{ i.name }}</td>
+                  <td>{{ i.email }}</td>
+                  <td>{{ i.phone }}</td>
+                  <td>
+                    {% if i.status == 'Ingresado' %} {# Cambiar el color del badge segun el status #}
+                      <span class="badge rounded-pill bg-info">{{ i.status }}</span>
+                    {% elif i.status == 'Sugerencia' %}
+                      <span class="badge rounded-pill bg-success">{{ i.status }}</span>
+                    {% elif i.status == 'Soporte' %}
+                      <span class="badge rounded-pill bg-warning">{{ i.status }}</span>
+                    {% elif i.status == 'Respondido' %}
+                      <span class="badge rounded-pill bg-primary">{{ i.status }}</span>    
+                    {% else %}
+                      <span class="badge rounded-pill bg-danger">{{ i.status }}</span>
+                    {% endif %}
+                  </td>
+                  <td>{{ i.message[:50] }}</td> {# Limitar mensaje mostrado en la tabla a 50 caracteres #}
+                  <td>
+                  {% if i.status != 'Respondido' %}
+                    <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#modalSolic"> Responder </button>
+                  {% endif %}
+                  </td>
+                 </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Fin Tabla -->
+
+{% endblock content %}
+
+</body>
+</html>

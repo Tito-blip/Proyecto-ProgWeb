@@ -1,0 +1,50 @@
+{% extends 'layouts/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  {% block nav_prof %} active {% endblock nav_prof %}
+
+    {% block content %}
+    {% include 'layouts/messages.html' %}
+   
+    <div class="container mt-5 mb-5">
+        <div class="row gx-0">
+          <div class="col-md-4 col-lg-4"  style="height: 395px;">
+                {% if current_user.photo %}
+                <img class="img-profile img-fluid" src="{{current_user.photo}}">
+                {% else %}
+                <img class="img-profile img-fluid" src="../../static/img/sample.png">
+                {% endif %}
+          </div>
+          <div class="col-md-8 col-lg-8">
+            <div class="d-flex flex-column">
+              <div class="d-flex flex-row justify-content-between align-items-center p-5 bg-dark text-white">
+                <h2 style="color:aliceblue;" class="display-5"><b>Bienvenido, {{current_user.name}}</b></h2>
+              </div>
+              <div class="p-3 bg-black">
+                <h6 class="text-center" style="color: aliceblue;">Texto de Ejemplo</h6>
+              </div>
+              <div class="d-flex flex-row">
+                <div class="p-4 bg-primary text-center skill-block">
+                </div>
+                <div class="p-3 bg-success text-center skill-block">
+                </div>
+                <div class="p-3 bg-warning text-center skill-block">
+                </div>
+                <div class="p-3 bg-danger text-center skill-block">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    {% endblock content %}
+</body>
+</html>

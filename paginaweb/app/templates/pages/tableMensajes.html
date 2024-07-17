@@ -33,7 +33,7 @@
           <select required style="background-color: #ffffffe3;" class="form-select border-0 mb-1 px-4 py-4 rounded shadow" name="id">
           <option value="" disabled selected> Mensajes </option>
           {% for i in base if i.status != 'Respondido' %}
-            <option  value="{{i.id}}"> {{i.name}} </option>
+            <option  value="{{i.id}}"> {{i.email}} </option>
           {% endfor %}
           </select>
           <br>

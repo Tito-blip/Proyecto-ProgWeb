@@ -1,5 +1,4 @@
 body {
-    font-family: "Montserrat", sans-serif; /* Cambio de fuente a Montserrat */
     width: 100%;
     height: 100vh;
     background-color: #95cab7;
@@ -29,7 +28,6 @@ body {
     text-transform: uppercase;
     margin-bottom: 20px; /* Espaciado inferior reducido */
     text-align: center;
-    font-family: "Montserrat", sans-serif; /* Cambio de fuente a Montserrat */
 }
 
 .content {

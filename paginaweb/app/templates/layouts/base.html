@@ -68,13 +68,13 @@
             <a class="nav-link {% block nav_consulta %} {% endblock nav_consulta%}" href="{{url_for('views_pagina.mensajes')}}"> <b> Consultas </b> </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% block nav_user %} {% endblock nav_user %}" href="{{url_for('views_pagina.table_user')}}"> <b> Usuarios </b> </a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link {% block nav_emp %} {% endblock nav_emp %}" href="{{url_for('views_pagina.profileEmp')}}"> <b> Perfil Empleado </b> </a>
           </li>
           {% endif %}
           {% if current_user.is_admin %}
+          <li class="nav-item">
+            <a class="nav-link {% block nav_user %} {% endblock nav_user %}" href="{{url_for('views_pagina.table_user')}}"> <b> Usuarios </b> </a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="{{url_for('admin.index')}}"> <b> Admin </b></a>
           </li>

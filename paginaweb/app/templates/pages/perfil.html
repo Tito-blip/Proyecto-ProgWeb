@@ -2,12 +2,16 @@
 
 {% block title %} Perfil {% endblock title %}
 
-<body>
-  {% block nav_prof %} active {% endblock nav_prof %}
+{% block nav_prof %} active {% endblock nav_prof %}
 
-    {% block content %}
-    {% include 'layouts/messages.html' %}
-   
+{% block background %} https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFrZXxlbnwwfHwwfHx8MA%3D%3D {% endblock background %}
+
+{% block content %}
+
+<body>
+
+  {% include 'layouts/messages.html' %}
+
     <div class="container mt-5 mb-5">
         <div class="row gx-0">
           <div class="col-md-4 col-lg-4"  style="height: 395px;">

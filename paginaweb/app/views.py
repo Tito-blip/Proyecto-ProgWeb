@@ -10,7 +10,7 @@ from datetime import date
 views_pagina = Blueprint('views_pagina', __name__) # Genera un blueprint para manejar las vista en el archivo principal
 
 try:
-    r = requests.get("https://jsonplaceholder.typicode.com/albums/1/photos?id=1") # Peticion GET a la API ** Se pude limitar con ?id=1**
+    r = requests.get("https://jsonplaceholder.typicode.com/albums/1/photos") # Peticion GET a la API ** Se pude limitar con ?id=1**
     if r.status_code == 200: # Manejar errores del request # 
         resp = r.json() # Procesar la respuesta como JSON
         with open('response.json', 'w') as rp: # Escribir la respuesta de la API a archivo Json
@@ -105,7 +105,7 @@ def profileEmp():
 @views_pagina.route("/tableUser")
 @login_required
 def table_user():
-    if current_user.is_emp or current_user.is_admin:
+    if current_user.is_admin:
         base = db.session.query(User).all() # Retrieve de la tabla User
         return render_template('pages/tableUser.html', base = base, current_date = current_date)
     return abort(401)

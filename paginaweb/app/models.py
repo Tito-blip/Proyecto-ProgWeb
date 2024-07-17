@@ -34,7 +34,7 @@ class User(UserMixin, db.Model):
     address = db.Column(db.String(60), unique=True, nullable=False)
     password = db.Column(db.String(150), nullable=False)
     photo = db.Column(db.String(255), nullable=True)
-    date = db.Column(Date(), default=func.date(func.datetime('now', 'localtime')), onupdate=func.date(func.datetime('now', 'localtime')))
+    date = db.Column(Date, default=func.now(), onupdate=func.now())    
     role = db.Column(db.String(50), nullable=False, default="User")
     is_emp = db.Column(db.Boolean, default=False) # Define flags de empleado y admin para comprobar con current_user
     is_admin = db.Column(db.Boolean, default=False)
@@ -58,7 +58,7 @@ class Contact(UserMixin, db.Model): # Los campos no son unicos, ya que la person
     lastname = db.Column(db.String(40), nullable=False)
     email = db.Column(db.String(65), nullable=False)
     phone = db.Column(db.Integer(), nullable=False)
-    date = db.Column(Date(), default=func.date(func.datetime('now', 'localtime')), onupdate=func.date(func.datetime('now', 'localtime')))
+    date = db.Column(Date, default=func.now(), onupdate=func.now())    
     message = db.Column(db.String(255), nullable=False)
     status = db.Column(db.String(20), default='Ingresado')
 

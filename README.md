@@ -14,7 +14,7 @@
     Repositorio Prueba Unidad 3
     <br />
     <br />
-    <a href="https://github.com/Tito-blip/Proyecto-ProgWeb">Inicio</a>
+    <a href="#instalar">Instalar</a>
     ·
     <a href="https://github.com/Tito-blip/Proyecto-ProgWeb/branches">Pruebas Anteriores</a>
     ·
@@ -29,7 +29,7 @@ El lenguaje HTML se utiliza para generar las plantillas que usará Flask. Por ot
 Para el servidor, se utiliza una VM con Ubuntu Server, la cual posee un entorno virtual de Python donde se maneja la aplicación de Flask. Utilizando Gunicorn, se maneja todo lo relacionado con Flask. Finalmente, se utiliza Nginx para manejar y redirigir las conexiones entrantes, pasando por una redirección HTTPS y, adicionalmente, mostrar los archivos estáticos.
  </p>
 
-### Tecnologías
+## Tecnologías
 * ![HTML5]
 * ![CSS]
 * ![JS]
@@ -37,14 +37,34 @@ Para el servidor, se utiliza una VM con Ubuntu Server, la cual posee un entorno 
 * [![Flask]][Flask-url] &nbsp; [![Jinja]][Jinja-url]
 * [![Postgres]][Postgres-url]
 
-### Servidor
+## Servidor
 * ![Linux]
 * [![Gunicorn]][Gunicorn-url]
 * [![Nginx]][Nginx-url]
 
+## Instalación (Windows)
+
+1.- Clonar Repo
+
+``` git clone https://github.com/Tito-blip/Proyecto-ProgWeb.git ```
+<br>
+``` cd Proyecto-ProgWeb ```
+
+2.- Crear Entorno Virtual
+
+``` python -m venv envpaginaweb ``` # Crear entorno en carpeta envpaginaweb
+
+``` envpaginaweb\Scripts\Activate.ps1 ``` # Activar entorno
+
+``` pip install -r requirements.txt ``` # Instalar requirements
+
+3.- Iniciar Aplicación
+
+``` flask run ```
+
 <!-- FOLDER STRUCTURE -->
 
-### Estructura Proyecto
+## Estructura Proyecto
 
 El proyecto se estructura en base al modelo MVT (Modelo - Vista - Plantilla). Utiliza modelos para estructurar la base de datos, vistas para manejar datos y crear las rutas de la app, y plantillas para estructurar las paginas.
 
